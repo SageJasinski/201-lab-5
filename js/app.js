@@ -8,12 +8,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-
 function sum(a, b) { //eslint-disable-line
-  let add = a + b;
-  let cat = ('The sum of ' + a + ' and ' + b + ' is ' + add + '.');
-  let ray = new Array(add, cat);
-  return ray;
+  const add = a + b;
+  function array(a,b){
+    let cat = ('The sum of ' + a + ' and ' + b + ' is ' + add + '.');
+    let ray = new Array(add,cat);
+    return ray;
+  }
+  return array(a,b);
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -54,13 +56,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  function add(x,y,z){
+    return x + y + z;
+  }
+  let tog = add(a,b,c);
+  function mult(x,y,z){
+    return x * y * z;
+  }
+  let prod= mult(a,b,c);
+  let addString = (a + ' and ' + b + ' and ' + c + ' sum to ' + tog + '.');
+  let prodSting = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prod + '.');
+  let array = new Array(tog,prod,addString,prodSting);
+  return array;
 }
+// sumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
